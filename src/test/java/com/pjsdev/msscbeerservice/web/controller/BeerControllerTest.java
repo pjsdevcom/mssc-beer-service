@@ -50,12 +50,11 @@ class BeerControllerTest {
 
     @Test
     void getBeerById() throws Exception {
-
         given(beerRepository.findById(any())).willReturn(Optional.of(Beer.builder().build()));
 
         mockMvc.perform(get("/api/v1/beer/{beerId}", UUID.randomUUID()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andDo(document("v1/beer",
+                .andDo(document("v1/beer-get",
                         pathParameters(parameterWithName("beerId").description("UUID of desired beer to get.")),
                         responseFields(
                                 fieldWithPath("id").description("Id of Beer"),
@@ -73,7 +72,6 @@ class BeerControllerTest {
 
     @Test
     void saveNewBeer() throws Exception {
-
         BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto); //converting object to json
 
@@ -81,7 +79,7 @@ class BeerControllerTest {
 
         mockMvc.perform(post("/api/v1/beer").contentType(MediaType.APPLICATION_JSON).content(beerDtoJson))
                 .andExpect(status().isCreated())
-                .andDo(document("v1/beer",
+                .andDo(document("v1/beer-new",
                         requestFields(
                                 fields.withPath("id").ignored(),
                                 fields.withPath("version").ignored(),
@@ -98,7 +96,6 @@ class BeerControllerTest {
 
     @Test
     void updateBeerById() throws Exception {
-
         BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
