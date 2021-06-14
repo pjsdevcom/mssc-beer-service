@@ -1,8 +1,8 @@
 package com.pjsdev.msscbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pjsdev.msscbeerservice.domain.Beer;
-import com.pjsdev.msscbeerservice.repositories.BeerRepository;
+import com.pjsdev.msscbeerservice.bootstrap.BeerLoader;
+import com.pjsdev.msscbeerservice.services.BeerService;
 import com.pjsdev.msscbeerservice.web.model.BeerDto;
 import com.pjsdev.msscbeerservice.web.model.BeerStyle;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,6 @@ import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
-import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -47,11 +46,11 @@ class BeerControllerTest {
     ObjectMapper objectMapper;
 
     @MockBean
-    BeerRepository beerRepository;
+    BeerService beerService;
 
     @Test
     void getBeerById() throws Exception {
-        given(beerRepository.findById(any())).willReturn(Optional.of(Beer.builder().build()));
+        given(beerService.getById(any())).willReturn(getValidBeerDto());
 
         mockMvc.perform(get("/api/v1/beer/{beerId}", UUID.randomUUID()).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -109,7 +108,7 @@ class BeerControllerTest {
                 .beerName("Top Beer")
                 .beerStyle(BeerStyle.LAGER)
                 .price(new BigDecimal("1.99"))
-                .upc(97612356732L)
+                .upc(BeerLoader.BEER_1_UPC)
                 .build();
     }
 
