@@ -3,11 +3,10 @@ package com.pjsdev.msscbeerservice.bootstrap;
 import com.pjsdev.msscbeerservice.domain.Beer;
 import com.pjsdev.msscbeerservice.repositories.BeerRepository;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-@Component
+//@Component
 public class BeerLoader implements CommandLineRunner { //will run every time Spring context starts
 
     public static final String BEER_1_UPC = "0631234200036";
@@ -21,7 +20,7 @@ public class BeerLoader implements CommandLineRunner { //will run every time Spr
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         loadBeerObjects();
     }
 
