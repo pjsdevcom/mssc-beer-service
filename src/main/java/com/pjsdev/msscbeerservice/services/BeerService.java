@@ -1,10 +1,16 @@
 package com.pjsdev.msscbeerservice.services;
 
 import com.pjsdev.msscbeerservice.web.model.BeerDto;
+import com.pjsdev.msscbeerservice.web.model.BeerPagedList;
+import com.pjsdev.msscbeerservice.web.model.BeerStyle;
+import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;
 
 public interface BeerService {
+
+    BeerPagedList listBeers(String beerName, BeerStyle beerStyle, PageRequest pageRequest);
+
     BeerDto getById(UUID beerId);
 
     BeerDto saveNewBeer(BeerDto beerDto);
