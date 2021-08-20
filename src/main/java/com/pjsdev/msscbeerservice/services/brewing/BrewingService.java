@@ -1,4 +1,4 @@
-package com.pjsdev.msscbeerservice.services;
+package com.pjsdev.msscbeerservice.services.brewing;
 
 import com.pjsdev.msscbeerservice.config.JmsConfig;
 import com.pjsdev.msscbeerservice.domain.Beer;
