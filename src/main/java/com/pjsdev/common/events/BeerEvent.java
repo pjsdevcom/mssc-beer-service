@@ -1,4 +1,4 @@
-package com.pjsdev.msscbeerservice.events;
+package com.pjsdev.common.events;
 
 import com.pjsdev.msscbeerservice.web.model.BeerDto;
 import lombok.AllArgsConstructor;
