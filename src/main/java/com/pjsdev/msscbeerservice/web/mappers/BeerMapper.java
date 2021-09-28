@@ -1,7 +1,7 @@
 package com.pjsdev.msscbeerservice.web.mappers;
 
+import com.pjsdev.brewery.model.BeerDto;
 import com.pjsdev.msscbeerservice.domain.Beer;
-import com.pjsdev.msscbeerservice.web.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 

@@ -1,12 +1,12 @@
 package com.pjsdev.msscbeerservice.services;
 
+import com.pjsdev.brewery.model.BeerDto;
+import com.pjsdev.brewery.model.BeerPagedList;
+import com.pjsdev.brewery.model.BeerStyle;
 import com.pjsdev.msscbeerservice.domain.Beer;
 import com.pjsdev.msscbeerservice.repositories.BeerRepository;
 import com.pjsdev.msscbeerservice.web.controller.NotFoundException;
 import com.pjsdev.msscbeerservice.web.mappers.BeerMapper;
-import com.pjsdev.msscbeerservice.web.model.BeerDto;
-import com.pjsdev.msscbeerservice.web.model.BeerPagedList;
-import com.pjsdev.msscbeerservice.web.model.BeerStyle;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;

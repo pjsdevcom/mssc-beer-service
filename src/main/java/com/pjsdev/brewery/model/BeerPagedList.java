@@ -1,4 +1,4 @@
-package com.pjsdev.msscbeerservice.web.model;
+package com.pjsdev.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

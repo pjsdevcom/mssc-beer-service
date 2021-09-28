@@ -1,6 +1,6 @@
-package com.pjsdev.common.events;
+package com.pjsdev.brewery.model.events;
 
-import com.pjsdev.msscbeerservice.web.model.BeerDto;
+import com.pjsdev.brewery.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

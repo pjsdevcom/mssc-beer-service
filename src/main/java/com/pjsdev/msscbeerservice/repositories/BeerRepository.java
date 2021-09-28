@@ -1,7 +1,7 @@
 package com.pjsdev.msscbeerservice.repositories;
 
+import com.pjsdev.brewery.model.BeerStyle;
 import com.pjsdev.msscbeerservice.domain.Beer;
-import com.pjsdev.msscbeerservice.web.model.BeerStyle;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

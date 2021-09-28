@@ -1,6 +1,6 @@
 package com.pjsdev.msscbeerservice.services.brewing;
 
-import com.pjsdev.common.events.BrewBeerEvent;
+import com.pjsdev.brewery.model.events.BrewBeerEvent;
 import com.pjsdev.msscbeerservice.config.JmsConfig;
 import com.pjsdev.msscbeerservice.domain.Beer;
 import com.pjsdev.msscbeerservice.repositories.BeerRepository;

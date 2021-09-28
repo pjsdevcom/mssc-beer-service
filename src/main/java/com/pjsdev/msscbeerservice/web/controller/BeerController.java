@@ -1,9 +1,9 @@
 package com.pjsdev.msscbeerservice.web.controller;
 
+import com.pjsdev.brewery.model.BeerDto;
+import com.pjsdev.brewery.model.BeerPagedList;
+import com.pjsdev.brewery.model.BeerStyle;
 import com.pjsdev.msscbeerservice.services.BeerService;
-import com.pjsdev.msscbeerservice.web.model.BeerDto;
-import com.pjsdev.msscbeerservice.web.model.BeerPagedList;
-import com.pjsdev.msscbeerservice.web.model.BeerStyle;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
